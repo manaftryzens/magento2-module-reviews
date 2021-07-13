@@ -1,0 +1,23 @@
+<?php
+/**
+ * @var Yotpo\Reviews\Block\Yotpo $block
+ * @var Magento\Framework\Escaper $escaper
+ */
+?>
+<?php if (!($block->isEnabled() && $block->isRenderWidget() && $block->hasProduct())) {
+    return;
+}
+?>
+<!-- Yotpo - Widget Div -->
+<?php if ($block->isRenderWidget()): ?>
+    <div class="yotpo yotpo-main-widget"
+         data-product-id="<?= $escaper->escapeHtmlAttr($block->getProductId()) ?>"
+         data-name="<?= $escaper->escapeHtmlAttr($block->getProductName()) ?>"
+         data-description="<?= $escaper->escapeHtmlAttr($block->getProductDescription()) ?>"
+         data-url="<?= $escaper->escapeHtmlAttr($block->getProductUrl()) ?>"
+         data-image-url="<?= $escaper->escapeHtmlAttr($block->getProductImageUrl()) ?>"
+         data-price="<?= $escaper->escapeHtmlAttr($block->getProductFinalPrice()) ?>"
+         data-currency="<?= $escaper->escapeHtmlAttr($block->getCurrentCurrencyCode()) ?>">
+     </div>
+<?php endif; ?>
+<!--/ Yotpo - Widget Div -->

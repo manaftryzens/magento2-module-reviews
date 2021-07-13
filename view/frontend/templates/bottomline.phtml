@@ -1,0 +1,28 @@
+<?php
+/**
+ * @var $block Yotpo
+ * @var Magento\Framework\Escaper $escaper
+ */
+
+use Yotpo\Reviews\Block\Yotpo;
+
+?>
+<?php if (!($block->isEnabled() && ($block->isRenderBottomline() || $block->isRenderBottomlineQna()))) {
+    return;
+} ?>
+<!-- Yotpo - BottomLine -->
+<div class="yotpoBottomLine">
+    <?php if ($block->isRenderBottomline()): ?>
+        <div class="yotpo bottomLine bottomline-position"
+            data-product-id="<?= $escaper->escapeHtmlAttr($block->getProductId()) ?>"
+            data-url="<?= $escaper->escapeUrl($block->getProductUrl()) ?>">
+        </div>
+    <?php endif; ?>
+    <?php if ($block->isRenderBottomlineQna()): ?>
+        <div class="yotpo QABottomLine"
+            data-appkey="<?= $escaper->escapeHtmlAttr($block->getAppKey()) ?>"
+            data-product-id="<?= $escaper->escapeHtmlAttr($block->getProductId()) ?>">
+        </div>
+    <?php endif; ?>
+</div>
+<!--/ Yotpo - BottomLine -->
