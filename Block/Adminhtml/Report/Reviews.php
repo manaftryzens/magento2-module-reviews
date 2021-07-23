@@ -148,7 +148,7 @@ class Reviews extends Template
      */
     public function getAppKey(): string
     {
-        return $this->appKey;
+        return $this->appKey ?: '';
     }
 
     /**
