@@ -2,6 +2,7 @@
 namespace Yotpo\Reviews\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\App\ProductMetadataInterface;
 use Magento\Framework\Encryption\EncryptorInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -52,6 +53,7 @@ class Config extends YotpoCoreConfig
      * @param ModuleListInterface $moduleList
      * @param WriterInterface $configWriter
      * @param ConfigResource $configResource
+     * @param ProductMetadataInterface $productMetadata
      */
     public function __construct(
         StoreManagerInterface $storeManager,
@@ -59,7 +61,8 @@ class Config extends YotpoCoreConfig
         EncryptorInterface $encryptor,
         ModuleListInterface $moduleList,
         WriterInterface $configWriter,
-        ConfigResource $configResource
+        ConfigResource $configResource,
+        ProductMetadataInterface $productMetadata
     ) {
         $this->encryptor = $encryptor;
 
@@ -69,7 +72,8 @@ class Config extends YotpoCoreConfig
             $moduleList,
             $encryptor,
             $configWriter,
-            $configResource
+            $configResource,
+            $productMetadata
         );
         $this->config = array_merge($this->config, $this->reviewsConfig);
         $this->endPoints = array_merge($this->endPoints, $this->reviewsEndPoints);

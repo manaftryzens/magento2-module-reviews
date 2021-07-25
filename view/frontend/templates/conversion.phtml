@@ -6,6 +6,7 @@ use Magento\Framework\Escaper;
  * @var $block Conversion
  * @var Escaper $escaper
  */
+$escaper = $escaper ?? $block;
 ?>
 <?php if (!($block->isEnabled() && $block->hasOrder())) {
     return;

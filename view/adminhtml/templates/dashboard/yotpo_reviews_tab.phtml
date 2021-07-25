@@ -6,6 +6,7 @@
 
 use Yotpo\Reviews\Block\Adminhtml\Dashboard\Tab\YotpoReviews;
 
+$escaper = $escaper ?? $block;
 ?>
 <?php if ($block->isAppKeyAndSecretSet()): ?>
     <div class="yotpo-reviews-totals" id="yotpo_reviews_totals">

@@ -6,6 +6,7 @@
 
 use Yotpo\Reviews\Block\Adminhtml\Report\Reviews;
 
+$escaper = $escaper ?? $block;
 ?>
 <?php if ($block->isEnabled() && $block->isAppKeyAndSecretSet()):
     $periods = $block->getPeriods(); ?>
