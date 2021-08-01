@@ -1,6 +1,7 @@
 <?php
 namespace Yotpo\Reviews\Model;
 
+use Magento\Eav\Model\Entity;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\ProductMetadataInterface;
 use Magento\Framework\Encryption\EncryptorInterface;
@@ -54,6 +55,7 @@ class Config extends YotpoCoreConfig
      * @param WriterInterface $configWriter
      * @param ConfigResource $configResource
      * @param ProductMetadataInterface $productMetadata
+     * @param Entity $entity
      */
     public function __construct(
         StoreManagerInterface $storeManager,
@@ -62,7 +64,8 @@ class Config extends YotpoCoreConfig
         ModuleListInterface $moduleList,
         WriterInterface $configWriter,
         ConfigResource $configResource,
-        ProductMetadataInterface $productMetadata
+        ProductMetadataInterface $productMetadata,
+        Entity $entity
     ) {
         $this->encryptor = $encryptor;
 
@@ -73,7 +76,8 @@ class Config extends YotpoCoreConfig
             $encryptor,
             $configWriter,
             $configResource,
-            $productMetadata
+            $productMetadata,
+            $entity
         );
         $this->config = array_merge($this->config, $this->reviewsConfig);
         $this->endPoints = array_merge($this->endPoints, $this->reviewsEndPoints);

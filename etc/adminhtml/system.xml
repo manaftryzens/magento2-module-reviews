@@ -1,38 +1,50 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <tab id="yotpo" translate="label" sortOrder="400">
             <label>Yotpo</label>
         </tab>
         <section id="yotpo_core" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-            <group id="widget_settings" translate="label" type="text" sortOrder="240" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Reviews Widget Settings</label>
+            <group id="widget_settings" translate="label" type="text" sortOrder="80" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Widget Settings</label>
                 <attribute type="expanded">0</attribute>
-                <field id="widget_enabled" translate="label" type="select" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Show Reviews Widget</label>
-                    <config_path>yotpo/settings/widget_enabled</config_path>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="category_bottomline_enabled" translate="label" type="select" sortOrder="260" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Show star rating on category pages</label>
-                    <config_path>yotpo/settings/category_bottomline_enabled</config_path>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="bottomline_enabled" translate="label" type="select" sortOrder="270" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Show star rating on product pages</label>
-                    <config_path>yotpo/settings/bottomline_enabled</config_path>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="qna_enabled" translate="label" type="select" sortOrder="280" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Enable Q&amp;A</label>
-                    <config_path>yotpo/settings/qna_enabled</config_path>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="mdr_enabled" translate="label" type="select" sortOrder="290" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Hide Magento Reviews</label>
-                    <config_path>yotpo/settings/mdr_enabled</config_path>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
+                <group id="review_widget_settings" translate="label" type="text" sortOrder="90" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Reviews Widgets</label>
+                    <attribute type="expanded">0</attribute>
+                    <field id="widget_enabled" translate="label" type="select" sortOrder="100" showInDefault="1"
+                           showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Show Reviews Widget</label>
+                        <config_path>yotpo/settings/widget_enabled</config_path>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="category_bottomline_enabled" translate="label" type="select" sortOrder="110"
+                           showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Show star rating on category pages</label>
+                        <config_path>yotpo/settings/category_bottomline_enabled</config_path>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="bottomline_enabled" translate="label" type="select" sortOrder="120" showInDefault="1"
+                           showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Show star rating on product pages</label>
+                        <config_path>yotpo/settings/bottomline_enabled</config_path>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="qna_enabled" translate="label" type="select" sortOrder="130" showInDefault="1"
+                           showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Enable Q&amp;A</label>
+                        <config_path>yotpo/settings/qna_enabled</config_path>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="mdr_enabled" translate="label" type="select" sortOrder="140" showInDefault="1"
+                           showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Hide Magento Reviews</label>
+                        <config_path>yotpo/settings/mdr_enabled</config_path>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                </group>
             </group>
         </section>
     </system>
