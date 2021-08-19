@@ -3,7 +3,7 @@
     <body>
         <!-- Add yotpo pixel for order conversion tracking -->
         <referenceContainer name="order.success.additional.info">
-            <block class="Yotpo\Reviews\Block\Conversion" name="yotpo_conversion" template="Yotpo_Reviews::conversion.phtml" cacheable="false" ifconfig="yotpo/settings/active"/>
+            <block class="Yotpo\Reviews\Block\Conversion" name="yotpo_conversion" template="Yotpo_Reviews::conversion.phtml" cacheable="false" ifconfig="yotpo_core/settings/active"/>
         </referenceContainer>
     </body>
 </page>
