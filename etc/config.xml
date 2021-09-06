@@ -1,17 +1,15 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <yotpo_core>
-            <widget_settings>
-                <review_widget_settings>
-                    <widget_enabled>0</widget_enabled>
-                    <category_bottomline_enabled>1</category_bottomline_enabled>
-                    <bottomline_enabled>0</bottomline_enabled>
-                    <qna_enabled>0</qna_enabled>
-                    <mdr_enabled>0</mdr_enabled>
-                </review_widget_settings>
-            </widget_settings>
-        </yotpo_core>
+        <yotpo>
+            <settings>
+                <widget_enabled>0</widget_enabled>
+                <category_bottomline_enabled>0</category_bottomline_enabled>
+                <bottomline_enabled>0</bottomline_enabled>
+                <qna_enabled>0</qna_enabled>
+                <mdr_enabled>0</mdr_enabled>
+            </settings>
+        </yotpo>
         <yotpo>
             <env>
                 <yotpo_widget_url>//staticw2.yotpo.com/</yotpo_widget_url>
