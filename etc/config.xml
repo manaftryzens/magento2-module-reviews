@@ -3,11 +3,11 @@
     <default>
         <yotpo>
             <settings>
-                <widget_enabled>0</widget_enabled>
-                <category_bottomline_enabled>0</category_bottomline_enabled>
-                <bottomline_enabled>0</bottomline_enabled>
-                <qna_enabled>0</qna_enabled>
-                <mdr_enabled>0</mdr_enabled>
+                <widget_enabled>1</widget_enabled>
+                <category_bottomline_enabled>1</category_bottomline_enabled>
+                <bottomline_enabled>1</bottomline_enabled>
+                <qna_enabled>1</qna_enabled>
+                <mdr_enabled>1</mdr_enabled>
             </settings>
         </yotpo>
         <yotpo>
