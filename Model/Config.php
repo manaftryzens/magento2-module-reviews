@@ -44,6 +44,7 @@ class Config extends YotpoCoreConfig
      */
     protected $reviewsEndPoints = [
         'metrics'  => 'apps/{store_id}/account_usages/metrics',
+        'product_bottomline'  => 'products/{store_id}/{product_id}/bottomline'
     ];
 
     /**
