@@ -2,13 +2,13 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block class="Yotpo\Reviews\Block\Yotpo" name="yotpo_reviews_widget_script" template="Yotpo_Reviews::widget_script.phtml" ifconfig="yotpo_core/settings/active"/>
+            <block class="Yotpo\Reviews\Block\Yotpo" name="yotpo_widget_script" template="Yotpo_Reviews::widget_script.phtml" ifconfig="yotpo_core/settings/active"/>
         </referenceContainer>
         <referenceBlock name="content.aside">
-            <block class="Yotpo\Reviews\Block\Yotpo" name="yotpo_reviews_widget_div" template="Yotpo_Reviews::widget_div.phtml" ifconfig="yotpo_core/settings/active"/>
+            <block class="Yotpo\Reviews\Block\Yotpo" name="yotpo_widget_div" template="Yotpo_Reviews::widget_div.phtml" ifconfig="yotpo_core/settings/active"/>
         </referenceBlock>
         <referenceContainer name="product.info.main">
-            <block class="Yotpo\Reviews\Block\Yotpo" name="yotpo_reviews_bottomline" template="Yotpo_Reviews::bottomline.phtml" before="product.info.addto" ifconfig="yotpo_core/settings/active"/>
+            <block class="Yotpo\Reviews\Block\Yotpo" name="yotpo_bottomline" template="Yotpo_Reviews::bottomline.phtml" before="product.info.addto" ifconfig="yotpo_core/settings/active"/>
         </referenceContainer>
     </body>
 </page>
