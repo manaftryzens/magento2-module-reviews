@@ -220,6 +220,10 @@ class Yotpo extends Template
      */
     public function escapeString($str)
     {
+        if ($str === null) {
+            return '';
+        }
+
         return $this->_escaper->escapeHtml(strip_tags($str));
     }
 
